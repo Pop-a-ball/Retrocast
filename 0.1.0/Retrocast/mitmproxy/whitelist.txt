@@ -1,0 +1,37 @@
+# Whitelist for mitmproxy scanner bypass
+# One entry per line. Empty lines and lines starting with '#' are ignored.
+# Entries support:
+#  - exact host (example.com)
+#  - domain suffix starting with '.' (.example.com matches sub.example.com)
+#  - wildcard prefix '*.example.com' (same as '.example.com')
+
+localhost
+127.0.0.1
+*.internal.local
+
+## Essential platform services to avoid disrupting
+# Windows Update / Microsoft CDN
+.microsoft.com
+.windows.net
+windowsupdate.microsoft.com
+download.windowsupdate.com
+download.microsoft.com
+.microsoftonline.com
+.office.com
+
+# Time sync / NTP
+time.windows.com
+pool.ntp.org
+ntp.org
+
+# Certificate revocation / OCSP / CRL
+crl.microsoft.com
+ocsp.microsoft.com
+ocsp.digicert.com
+crl3.digicert.com
+ocsp.int-x3.letsencrypt.org
+
+## Additional requested hosts
+# reqrypt.org
+# .reqrypt.org
+# *.reqrypt.org

@@ -1,0 +1,42 @@
+// Retrocast.rc
+//
+
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+#include "winres.h"
+
+#undef APSTUDIO_READONLY_SYMBOLS
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+IDD_RETROCAST_DIALOG DIALOGEX 0, 0, 320, 240
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Retrocast - https://github.com/Pop-a-ball/Retrocast"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Run Components",IDC_STATIC,7,7,150,80
+    PUSHBUTTON      "Start WinDivert",IDC_START_WINDIVERT,14,20,100,14
+    PUSHBUTTON      "Start mitmproxy",IDC_START_MITM,14,40,100,14
+    PUSHBUTTON      "Stop All",IDC_STOP_ALL,14,60,100,14
+    LTEXT           "Retrocast is a program for filtering internet traffic on your computer based on time. TEST ONLY! Please read the README.md!",IDC_STATIC,160,7,140,80
+    EDITTEXT        IDC_LOG_EDIT,7,100,300,115,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+    CONTROL         "Project repo - https://github.com/Pop-a-ball/Retrocast",IDC_STATIC,"STATIC",SS_LEFT | WS_TABSTOP,7,225,300,10
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "Retrocast Version 0.1",IDC_STATIC,42,14,114,8
+    LTEXT           "Copyright (C) 2026",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,41,50,14,WS_GROUP
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "About Retrocast"
+END
